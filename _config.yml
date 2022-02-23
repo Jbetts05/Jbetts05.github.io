@@ -4,7 +4,7 @@ bio:                'Microsoft DS Toolkit'
 description:        "Microsoft DS Toolkit"
 locale:             en_UK
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://github.com/Jbetts05/Jbetts05.github.io" # the base hostname & protocol for your site
+url: "https://jbetts05.github.io/" # the base hostname & protocol for your site
 
 # Comments
 disqus_shortname:   default
