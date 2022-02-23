@@ -1,0 +1,150 @@
+---
+layout: null
+title: Microsoft DS Toolkit
+description: The Data Science Toolkit provides Data Scientists, Solution Architects and delivery teams, with packaged, vetted and tested delivery accelerators, delivery guidance and product backlogs for common machine learning scenarios.
+sitemap:
+    priority: 1.0
+    lastmod: 2017-11-02
+    changefreq: weekly
+---
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+  Jekyll integration by somiibo.com
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+    {% include head.html %}
+
+
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+            <h1>Microsoft DS Toolkit</h1>
+						<!-- <h2>The Jekyll Theme Version</h2> -->
+						<p>The Data Science Toolkit provides Data Scientists, Solution Architects and delivery teams, with packaged, vetted and tested delivery accelerators, delivery guidance and product backlogs for common machine learning scenarios.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="{{ "/" | absolute_url }}" class="logo">Microsoft DS Toolkit</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+
+            {% include nav.html %}
+
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2><a href="#">What is the Data Science Toolkit?</a></h2>
+									<p style="font-style: normal;"> 
+										
+										<div class="box">
+											<p>Have you ever wished for a 'push button way to set up an Azure environment for ML' 
+												(to get quickly past the boring stuff, and get to the exciting work of building /training a model)?​​​​​​​
+												<ul>
+													<li>Have you ever wanted to contributed back to IP and show the great work that has been done for your customer?</li>
+													<li>Now you can do both of these using the Data Science Toolkit. </li>
+												</ul>
+											</p>
+
+
+										</div>
+									
+										<hr />
+										
+									
+										
+								</header>
+								
+								<h3>Repeatable starting points and reusable, configurable assets</h3>
+
+								<p>The IP contained in the Data Science Toolkit is constructed by categorizing the Machine Learning custom solution that IS Delivery develops for our 
+									customers, into three categories. The first category consists of those elements that are the same for each customer, elements that are consistently 
+									created in the same way. The second are those elements that are similar for each customer, that perhaps are started in the same way but then 
+									changed depending on the customer scenario. The third are those elements that are always unique or custom to the specific customer.</p>
+               
+								<p>The Data Science Toolkit provides data scientist with solution code for the first category (configurable assets) and the second category (repeatable starting points), 
+								allowing data scientists to focus time on the third category (custom code). Simply put, the Data science Toolkit give data scientist more time to do the meaningful work, 
+								and less time configuring the "plumbing".</p>
+
+								<a class="image main"><img src="{{ "/images/ds-toolkit.png" | absolute_url }}" alt="" /></a>
+
+								<h3>What are the benefits to Microsoft customers?</h3>
+
+								<p>There are two main benefits for customers when using repeatable starting points or delivery accelerators, rather than “starting from scratch” when building a 
+									custom solution.</p>
+								<p>The delivery accelerators incorporates the combined delivery experience of many different deployments across multiple industries and customers, 
+									in a repeatable, consistent and easy to deploy collection of code artifacts. The delivery accelerators eliminates potential miss configurations 
+									or “gaps” in the deployment of a new solution. The quality of delivery is therefore improved significantly through the use of the accelerator.</p>
+								<p> addition the delivery accelerators help delivery data science teams to focus on the specific nuances required by the customer specific requirements, 
+									rather than spend time to deliver basic foundational elements. The value of the delivery is therefore improved, since the data science team can 
+									focus on customer specific requirements and not on tooling configuration and deployment.</p>
+							
+
+							</article>
+							<h2 style="text-align: center;"><a href="#">Delivery Accelerators</a></h2>
+
+						<!-- Posts -->
+							<section class="posts">
+                {% for post in site.posts limit:4 %}
+                {% assign mod4 = forloop.index | modulo: 4 %}
+  								<article>
+  									<header>
+  										<!-- <span class="date">{{ post.date | date_to_string }}</span> -->
+  										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+  									</header>
+  									<!-- <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a> -->
+  									<p style="text-align: center;">{{ post.excerpt }}</p>
+  									<ul class="actions">
+  										<li><a href="{{ post.url | absolute_url }}" class="button">See More</a></li>
+  									</ul>
+  								</article>
+                  {% if mod3 == 0 %}
+                  <article>
+  									<header>
+  										<!-- <h2><a href="#">Sponsored</a></h2> -->
+  									</header>
+
+  								</article>
+                  {% endif %}
+                {% endfor %}
+
+							</section>
+
+						<!-- Footer -->
+							<footer>
+                <ul class="actions">
+                  <li><a href="{{ "/blog/" | absolute_url }}" class="button">All Repositories</a></li>
+                </ul>
+							</footer>
+
+					</div>
+
+				<!-- Footer -->
+        {% include foot.html %}
+
+			</div>
+
+		<!-- Scripts -->
+		{% include scripts-main.html %}
+    {% include tracking.html %}
+
+	</body>
+</html>
