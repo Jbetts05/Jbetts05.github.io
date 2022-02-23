@@ -27,7 +27,7 @@ sitemap:
 
 				<!-- Intro -->
 					<div id="intro">
-            <h2>Microsoft DS Toolkit</h2>
+            <h1>Microsoft DS Toolkit</h1>
 						<!-- <h2>The Jekyll Theme Version</h2> -->
 						<p>The Data Science Toolkit provides Data Scientists, Solution Architects and delivery teams, with packaged, vetted and tested 
 							delivery accelerators, delivery guidance and product backlogs for common machine learning scenarios.</p>
@@ -53,16 +53,23 @@ sitemap:
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<h2><a href="#">What is the Data Science Toolkit?</a></h2>
+									<h2><a>What is the Data Science Toolkit? </a></h2>
 									<p style="font-style: normal;"> 
 										
-										<div class="box">
-											<p>Have you ever wished for a 'push button way to set up an Azure environment for ML' 
-												(to get quickly past the boring stuff, and get to the exciting work of building /training a model)?​​​​​​​
-												<ul>
-													<li>Have you ever wanted to contributed back to IP and show the great work that has been done for your customer?</li>
-													<li>Now you can do both of these using the Data Science Toolkit. </li>
+										<div class="box" style=" text-align: center;">
+											<p style=" text-align: center;">Have you ever wished for a 'push button way to set up an Azure environment for ML' (to get quickly past the boring stuff, and get to the exciting work of building /training a model)?​​​​​​​
+												
+												<p style="text-align: center; font-weight: bold;" >OR</p>
+												
+												<p style=" text-align: center;">Have you ever wanted to contribute back to IP and show the great work has been done for your customer?</p>
+
+												<p style=" text-align: center;">Now you can do both of these using the Data Science Toolkit: 
+												<ul style="align-self: center; list-style-type: none;">
+													<li><a href="{{ '/blog/' | absolute_url }}"; style="font-weight: bold;">Use the Toolkit</a></li>
+													<li><a href="{{ '/blog/' | absolute_url }}"; style="font-weight: bold;">Contribute to the Toolkit</a></li>
+													<!-- <a href="{{ "/blog/" | absolute_url }}">Toolkit</a> -->
 												</ul>
+											</p>
 											</p>
 
 
@@ -76,28 +83,19 @@ sitemap:
 								
 								<h3>Repeatable starting points and reusable, configurable assets</h3>
 
-								<p>The IP contained in the Data Science Toolkit is constructed by categorizing the Machine Learning custom solution that IS Delivery develops for our 
-									customers, into three categories. The first category consists of those elements that are the same for each customer, elements that are consistently 
-									created in the same way. The second are those elements that are similar for each customer, that perhaps are started in the same way but then 
-									changed depending on the customer scenario. The third are those elements that are always unique or custom to the specific customer.</p>
+								<p>The IP contained in the Data Science Toolkit is constructed by categorizing the Machine Learning custom solution that IS Delivery develops for our customers, into three categories. The first category consists of those elements that are the same for each customer, elements that are consistently created in the same way. The second are those elements that are similar for each customer, that perhaps are started in the same way but then changed depending on the customer scenario. The third are those elements that are always unique or custom to the specific customer.</p>
                
-								<p>The Data Science Toolkit provides data scientist with solution code for the first category (configurable assets) and the second category (repeatable starting points), 
-								allowing data scientists to focus time on the third category (custom code). Simply put, the Data science Toolkit give data scientist more time to do the meaningful work, 
-								and less time configuring the "plumbing".</p>
+								<p>The Data Science Toolkit provides data scientist with solution code for the first category (configurable assets) and the second category (repeatable starting points), allowing data scientists to focus time on the third category (custom code). Simply put, the Data science Toolkit give data scientist more time to do the meaningful work, and less time configuring the "plumbing".</p>
 
 								<a class="image main"><img src="{{ "/images/ds-toolkit.png" | absolute_url }}" alt="" /></a>
 
 								<h3>What are the benefits to Microsoft customers?</h3>
 
-								<p>There are two main benefits for customers when using repeatable starting points or delivery accelerators, rather than “starting from scratch” when building a 
-									custom solution.</p>
-								<p>The delivery accelerators incorporates the combined delivery experience of many different deployments across multiple industries and customers, 
-									in a repeatable, consistent and easy to deploy collection of code artifacts. The delivery accelerators eliminates potential miss configurations 
-									or “gaps” in the deployment of a new solution. The quality of delivery is therefore improved significantly through the use of the accelerator.</p>
-								<p> addition the delivery accelerators help delivery data science teams to focus on the specific nuances required by the customer specific requirements, 
-									rather than spend time to deliver basic foundational elements. The value of the delivery is therefore improved, since the data science team can 
-									focus on customer specific requirements and not on tooling configuration and deployment. </p>
-							
+								<p>There are two main benefits for customers when using repeatable starting points or delivery accelerators, rather than “starting from scratch” when building a custom solution.</p>
+
+								<p>The delivery accelerators incorporates the combined delivery experience of many different deployments across multiple industries and customers, in a repeatable, consistent and easy to deploy collection of code artifacts. The delivery accelerators eliminates potential miss configurations or “gaps” in the deployment of a new solution. The quality of delivery is therefore improved significantly through the use of the accelerator.</p>
+
+								<p> addition the delivery accelerators help delivery data science teams to focus on the specific nuances required by the customer specific requirements, rather than spend time to deliver basic foundational elements. The value of the delivery is therefore improved, since the data science team can focus on customer specific requirements and not on tooling configuration and deployment. </p>
 
 							</article>
 							<h2 style="text-align: center;"><a href="#">Delivery Accelerators</a></h2>
@@ -108,8 +106,9 @@ sitemap:
                 {% assign mod4 = forloop.index | modulo: 4 %}
   								<article>
   									<header>
-  										<!-- <span class="date">{{ post.date | date_to_string }}</span> -->
+  										
   										<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+										  <span class="author">{{ post.author}}</span>
   									</header>
   									<!-- <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a> -->
   									<p style="text-align: center;">{{ post.excerpt }}</p>
@@ -132,7 +131,7 @@ sitemap:
 						<!-- Footer -->
 							<footer>
                 <ul class="actions">
-                  <li><a href="{{ "/blog/" | absolute_url }}" class="button">All Repositories</a></li>
+                  <li><a href="{{ "/blog/" | absolute_url }}" class="button">All Accelerators</a></li>
                 </ul>
 							</footer>
 

@@ -33,7 +33,7 @@
 
           <article class="post featured">
             <header class="major">
-              <h2><a href="#">DS Toolkit</a></h2>
+              <h2><a href>DS Toolkit</a></h2>
 
             </header>
 						<p>
@@ -46,7 +46,7 @@
 						</p>
 						
           </article>
-		  			<h2 style="text-align: center;">Delivery Accelerator Repositories</h2>
+		  			<h2 style="text-align: center;">Delivery Accelerators</h2>
 					<!-- Post -->
 					<section class="posts">
 						{% for post in site.posts %}
@@ -55,6 +55,7 @@
 								<header>
 									<!-- <span class="date">{{ post.date | date_to_string }}</span> -->
 									<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+									<span class="author" style="font-size: xx-large;">{{ post.author}}</span>
 								</header>
 								<!-- <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a> -->
 								<p style="text-align: center;">{{ post.excerpt }}</p>
