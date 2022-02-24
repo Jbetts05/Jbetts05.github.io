@@ -5,24 +5,63 @@ author: "🏁"
 excerpt: "Binary classification, with parameter based auto algorithm selection."
 image: ""
 ---
+<a href="https://github.com/microsoft/dstoolkit-classification-solution-accelerator"; style="float: right;">🔗Classification Repository🔗</a>
+<h2>Accelerator Description</h2>
+<p>
+    Binary classification models are perhaps the most common use-case in predictive analytics. The reason is that many key client actions across a wide range of industries are binary in nature, such as:
+    <ul>
+        <li>defaulting on a loan,</li>
+        <li>clicking on an ad,</li>
+        <li>terminating a subscription,</li>
+        <li>quality control of products, processes or services,</li>
+        <li>medical testing,</li>
+        <li>and so on.</li>
+    </ul>
+</p>
+<p>
+    Because of this broad commonality, this accelerator will prove optimal in many data science-based engagements, streamlining time to value.
+</p>
+<!-- <p>
+    Image Recognition aims to recognize and identify objects in images as well as understanding the content and context. TensorFlow object recognition algorithms classify and identify arbitrary objects within larger images. This is usually used in engineering applications such as social networks for photo tagging. By analyzing thousands of photos of trees for example, the technology can learn to identify a tree in an image it has never seen before.
+</p>  -->
 
-## How to Use This Theme
-Just go ahead and read up on [how to install Jekyll](https://jekyllrb.com/). It's not too hard I promise!
+<!-- <h3>Process Description</h3>
+<a class="image main"><img src="{{ "/images/classification/architecture.png" | absolute_url }}" alt="" /></a> -->
+<p>
+    <u>Details of the accelerator:</u> 
+    <ul>
+        <li>Leverages the <a href="https://github.com/microsoft/dstoolkit-mlops-base"; style="">ML Ops accelerator</a> to provide a configurable and re-usable solution accelerator for binary classification cases.</li>
+        <li>Auto selects the best classification algorithm for the dataset based on user defined criteria (parameters).</li>
+        <li>Uses Azure ML and Azure Dev Ops</li>
+    </ul>
+</p>
 
-Download this repository [here](https://github.com/iwiedenm/jekyll-theme-massively) and save it to any folder you want.
+<h3>Architecture</h3>
+<a class="image main"><img src="{{ "/images/classification/architecture.png" | absolute_url }}" alt="" /></a> 
 
-Open a terminal window or a command line and ```cd``` to that location.
+<h3>Prerequisites</h3>
+<div class="box">
+    <ul>
+        <li>Access to an Azure subscription</li>
+        <li>Access to an Azure DevOps subscription</li>
+        <li>Service Principal Account</li>
+    </ul>
+</div>   
 
-Then enter: ```bundle exec jekyll serve```. You can now access your new Jekyll site from [http://127.0.0.1:4000/](http://127.0.0.1:4000/). Have fun exploring your new site!
+<h3>Use Case</h3>
+Any <u>yes / no</u> question requirement including:
+<ul>
+    <li>defaulting on a loan,</li>
+    <li>clicking on an ad,</li>
+    <li>terminating a subscription,</li>
+    <li>quality control of products, processes or services,</li>
+    <li>medical testing.</li>
+</ul>
 
-## Features
-### Auto-Generating Sitemap
-The sitemap is auto generated! Just simply change the front matter of each site. It looks like so...
-```
-sitemap:
-    priority: 0.7
-    lastmod: 2017-11-02
-    changefreq: weekly
-```
-### Formspring integration
-The contact form below each page on the footer actually collects information! Just change your email address in the ```_config.yml``` file!
+<h3>Accelerator Components</h3>
+<a class="image main"><img src="{{ "/images/classification/accelerator-component.png" | absolute_url }}" alt="" /></a>
+<h3>Branching Strategy</h3>
+<a class="image main"><img src="{{ "/images/ml-ops/branching-strategy.png" | absolute_url }}" alt="" /></a> 
+<!-- uses the same branching strategy on most of the links, some don't use the image, but we may be able to add it later -->
+<h4>Access The Repository Here:</h4>
+<a href="https://github.com/microsoft/dstoolkit-classification-solution-accelerator"; style="">🔗Classification Repository🔗</a>
