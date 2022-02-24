@@ -5,24 +5,122 @@ author:   "🔗"
 excerpt: "GLUE is a lightweight, Python-based collection of scripts to support you at succeeding with speech and text us"
 image: ""
 ---
+<a href="https://github.com/microsoft/glue"; style="float: right;">🔗GLUE Repository🔗</a>
+<h2>Accelerator Description</h2>
+<p>
+    GLUE is a lightweight, Python-based collection of scripts to support you at succeeding with speech and text use-cases based on <a href="https://azure.microsoft.com/en-us/services/cognitive-services/"; style="">Microsoft Azure Cognitive Services</a>.
+     It not only allows you to batch-process data, but also glues together the services of your choice in one place and ensures an end-to-end view on the training and testing process.
 
-## How to Use This Theme
-Just go ahead and read up on [how to install Jekyll](https://jekyllrb.com/). It's not too hard I promise!
+     <h3>Prerequisites</h3>
+     <div class="box">
+         <ul>
+             Before getting your hands on the toolkits, make sure your local computer is equipped with the following frameworks and base packages:
+             <li>Python (required, Version >=3.8 is recommended).</li>
+             <li>VSCode (recommended), but you can also run the scripts using PowerShell, Bash etc.</li>
+             <li>Stable connection for installing your environment and scoring the files.</li>
+             <li>ffmpeg for audio file conversion (only for TTS use cases).</li>
+             <ul>
+                 <li>If you are using Windows, download it from here and see the description here.</li>
+                 <li>In case you are using Linux, you can install it via command line using a package manager, such as apt-get install ffmpeg.</li>
+             </ul>
+         </ul>
+     </div>
 
-Download this repository [here](https://github.com/iwiedenm/jekyll-theme-massively) and save it to any folder you want.
+     <h3>Modules</h3>
+    <ul>
+        GLUE consists of multiple modules, which either can be executed separately or ran as a central pipeline:
+        <li>Batch-transcribe audio files to text transcripts using Microsoft Speech to Text Service (STT).</li>
+        <li>Batch-synthesize text data using Microsoft Text to Speech Service (TTS).</li>
+        <li>Batch-evaluate reference transcriptions and recognitions.</li>
+        <li>Batch-score text strings on an existing, pre-trained Microsoft LUIS-model.</li>
+    </ul>
+</p>
 
-Open a terminal window or a command line and ```cd``` to that location.
+<!-- <p>
+    The aim is to bring State-of-the-art (SOTA) object detection models quickly into production scenarios particularly around the use of defect detection as seen in many quality control scenarios.
+</p>
+<p>
+    Image Recognition aims to recognize and identify objects in images as well as understanding the content and context. TensorFlow object recognition algorithms classify and identify arbitrary objects within larger images. This is usually used in engineering applications such as social networks for photo tagging. By analyzing thousands of photos of trees for example, the technology can learn to identify a tree in an image it has never seen before.
+</p> -->
 
-Then enter: ```bundle exec jekyll serve```. You can now access your new Jekyll site from [http://127.0.0.1:4000/](http://127.0.0.1:4000/). Have fun exploring your new site!
+<!-- <h3>Process Description</h3>
+<a class="image main"><img src="{{ "/images/ml-ops/mlops.png" | absolute_url }}" alt="" /></a> -->
 
-## Features
-### Auto-Generating Sitemap
-The sitemap is auto generated! Just simply change the front matter of each site. It looks like so...
-```
-sitemap:
-    priority: 0.7
-    lastmod: 2017-11-02
-    changefreq: weekly
-```
-### Formspring integration
-The contact form below each page on the footer actually collects information! Just change your email address in the ```_config.yml``` file!
+<!-- <p>
+    <u>Details of the accelerator:</u> 
+    <ul>
+        <li>Leverages the <a href="https://jbetts05.github.io//blog/object-detection/">ML Ops accelerator </a> to provide a configurable and re-usable solution accelerator for computer vision detection use-cases.</li>
+        <li>Can deploy the computer vision model as a consumable service endpoint in the cloud (Azure).</li>
+        <li>Train models using <a href="https://github.com/tensorflow/models/tree/master/research/object_detection"> TensorFlow Object Detection API​​​​​​​ </a> leveraging transfer learning with <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md">model zoo </a> pre-trained models.</li>
+        <li>Uses Azure ML, Azure DevOps and TensorFlow.</li>
+    </ul>
+</p> -->
+
+<!-- 
+<h3>Architecture</h3>
+<a class="image main"><img src="{{ "/images/ml-ops/architecture.png" | absolute_url }}" alt="" /></a>     -->
+
+<h3>Use Case</h3>
+<ul>
+    <li>Automatized generation of synthetic speech-model training data.</li>
+    <li>Batch-transcription of audio files and evaluation given an existing reference transcript.</li>
+    <li>Scoring of STT-transcriptions on an existing LUIS-model.</li>
+</ul>
+
+<h3>Accelerator Components</h3>
+<div class="box" style="background-color: rgb(243, 242, 241);">
+    <ul>
+        <p>This section describes the single components of GLUE, which can either be ran autonomously or, ideally, using the central orchestrator.</p>
+
+        <u>glue.py</u>
+        <li>Central application orchestrator of the toolkit.</li>
+        <li>Glues together the single modules in one place as needed.</li>
+        <li>Reads input files and writes output files.</li>
+        
+        <br><u>stt.py</u>
+        <li>Batch-transcription of audio files using <a href="https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/";>Microsoft Speech to Text API</a>.</li>
+        <li>Allows baseline models as well as custom endpoints.</li>
+        <li>Functionality is limited to the languages and locales listed on the language support page.</li>
+        
+        <br><u>tts.py</u>
+        <li>Batch-synthetization of text strings using <a href="https://azure.microsoft.com/en-us/services/cognitive-services/text-to-speech/";>Microsoft Text to Speech API</a>.</li>
+        <li>Supports Speech Synthesis Markup Language (SSML) to fine-tune and customize the pronunciation, as described in the <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-synthesis-markup?tabs=python";>documentation</a>.</li>
+        <li>Retrieves high-quality audio file from the API and converts it to the Microsoft speech format as well as a version underlaid by the noise of a telephone line.</li>
+        <li>Functionality is limited to the languages and fonts listed on the <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support#text-to-speech";>language support</a> page.</li>
+        <li>Make sure the voice of your choice is available in the respective Azure region <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/rest-text-to-speech#standard-and-neural-voices";>(see documentation)</a>.</li>
+
+        <br><u>luis.py</u>
+        <li>Batch-scoring of intent-text combinations using an existing LUIS model.</li>
+        <ul style="margin: 0 0 0 0;">
+            <li>See the following <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-get-started-create-app";>quickstart documentation</a> in case you need some inspiration for your first LUIS-app.</li>
+        </ul>
+        <li>Configureable scoring treshold, if predictions only want to be accepted given a certain confidence score returned by the API.</li>
+        <li>Writes scoring report as comma-separated file.</li>
+        <li>Returns classification report and confusion matrix based on <a href="https://github.com/scikit-learn/scikit-learn";>scikit-learn</a>.</li>
+        
+
+        <br><u>evaluate.py</u>
+        <li>Evaluation of transcription results by comparing them with reference transcripts.</li>
+        <li>Calculates metrics such as <a href="https://en.wikipedia.org/wiki/Word_error_rate";>Word Error Rate (WER)</a>, Sentence Error Rate (SER), Word Recognition Rate (WRR).</li>
+        <li>Implementation based on <a href ="github.com/belambert/asr-evaluation">github.com/belambert/asr-evaluation</a>.</li>
+        <li>See some hints on <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-custom-speech-evaluate-data";>how to improve your Custom Speech accuracy</a>.</li>
+
+        <br><u>params.py</u>
+        <li>Collects API and configuration parameters from the command line (ArgumentParser) and the config.ini.</li>
+
+        <br><u>helper.py</u>
+        <li>Collection of helper functions which do not have a purpose on their own, rather complementing the orchestrator and keeping the code neat and clean.</li>
+        <li>In case there is a need for custom components, we recommend to add them to this module.</li>
+        <li>Creates folder for every run using the naming convention YYYYMMDD-[unique ID].</li>
+    </ul>
+</div>
+
+
+
+<!-- <a class="image main"><img src="{{ "/images/ml-ops/accelerator-components.png" | absolute_url }}" alt="" /></a>
+<h3>Branching Strategy</h3>
+<a class="image main"><img src="{{ "/images/ml-ops/branching-strategy.png" | absolute_url }}" alt="" /></a> -->
+<h4>Access The Repository Here:</h4>
+<a href="https://github.com/microsoft/dstoolkit-mlops-base"; style="">🔗ML Ops Repository🔗</a>
+
+<style>a {color: #6ba2d9;}</style>
