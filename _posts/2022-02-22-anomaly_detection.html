@@ -6,25 +6,45 @@ excerpt: "Detect anomalies on very large structured data sets"
 image: ""
 ---
 
-## How to Use This Theme
-Just go ahead and read up on [how to install Jekyll](https://jekyllrb.com/). It's not too hard I promise!
+<a href="https://github.com/microsoft/dstoolkit-anomaly-detection-ijungle"; style="float: right;">🔗Anomaly Detection Repository🔗</a>
+<h2>Accelerator Description</h2>
+<p style="margin-bottom: 0.7em;">
+    Anomaly Detection is the technique of identifying rare events or observations which can raise suspicions by being statistically different from the rest of the observations. Such “anomalous” behavior typically translates to some kind of a problem like a:
+</p>
+<ul>
+    <li>Credit card fraud,</li>
+    <li>Failing machine in a server,</li>
+    <li>A cyber-attack,</li>
+    <li>Variation in financial transactions,</li>
+    <li>And so on.</li>
+</ul>
+<p>
+    Common Anomaly Detection techniques are difficult to implement on very large sets of Data. The Anomaly Detection Accelerator, leverages the iJungle technique from Dr Ricardo Castro, which solves this challenge, enabling anomaly detection on large sets of data.
+</p>
 
-Download this repository [here](https://github.com/iwiedenm/jekyll-theme-massively) and save it to any folder you want.
+<!-- <h3>Architecture</h3>
+<a class="image main"><img src="{{ "/images/object-detection/architecture.png" | absolute_url }}" alt="" /></a> -->
+<!-- 
+<p>
+    <u>Details of the accelerator:</u> 
+    <ul>
+        <li>Leverages the <a href="https://jbetts05.github.io//blog/object-detection/">ML Ops accelerator </a> to provide a configurable and re-usable solution accelerator for computer vision detection use-cases.</li>
+        <li>Can deploy the computer vision model as a consumable service endpoint in the cloud (Azure).</li>
+        <li>Train models using <a href="https://github.com/tensorflow/models/tree/master/research/object_detection"> TensorFlow Object Detection API​​​​​​​ </a> leveraging transfer learning with <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md">model zoo </a> pre-trained models.</li>
+        <li>Uses Azure ML, Azure DevOps and TensorFlow.</li>
+    </ul>
+</p> -->
 
-Open a terminal window or a command line and ```cd``` to that location.
-
-Then enter: ```bundle exec jekyll serve```. You can now access your new Jekyll site from [http://127.0.0.1:4000/](http://127.0.0.1:4000/). Have fun exploring your new site!
-
-## Features
-### Auto-Generating Sitemap
-The sitemap is auto generated! Just simply change the front matter of each site. It looks like so...
-```
-sitemap:
-    priority: 0.7
-    lastmod: 2017-11-02
-    changefreq: weekly
-```
-### Formspring integration
-The contact form below each page on the footer actually collects information! Just change your email address in the ```_config.yml``` file!
-
+<h3>Prerequisites</h3>
+<div class="box">
+    <ul>
+        <li>​​​​​​​Azure Machine Learning (Ubuntu Linux compute)</li>
+    </ul>
+</div>
+<h3>Accelerator Components</h3>
+<a class="image main"><img src="{{ "/images/anomaly/accelerator-components.png" | absolute_url }}" alt="" /></a>
+<!-- <h3>Branching Strategy</h3>
+<a class="image main"><img src="{{ "/images/object-detection/branching-strategy.png" | absolute_url }}" alt="" /></a> -->
+<h4>Access The Repository Here:</h4>
+<a href="https://github.com/microsoft/dstoolkit-anomaly-detection-ijungle"; style="">🔗Anomaly Detection Repository🔗</a>
 <style>a {color: #6ba2d9;}</style>
