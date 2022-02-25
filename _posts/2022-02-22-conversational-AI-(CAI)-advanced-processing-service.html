@@ -5,25 +5,111 @@ author: "💬"
 excerpt: "Collection of modules to help with validation, identification and authentication processes"
 image: ""
 ---
+<a href="https://github.com/microsoft/cai-advanced-processing-service"; style="float: right;">🔗CAI Repository🔗</a>
+<h2>Accelerator Description</h2>
+<p>
+    The Conversational AI - Advanced Processing Service consists of a series of APIs the simplify common validation, identification and authentication tasks when implementing conversational AI solutions.
+</p>
+<h4>Why this is important</h4>
+<p>Among the key activities in conversational AI interactions are validation, identification and authentication of the user.  By creating an accelerator, we not only drive speed in delivery, but we also ensure consistent processing approach to these important activities. </p>
 
-## How to Use This Theme
-Just go ahead and read up on [how to install Jekyll](https://jekyllrb.com/). It's not too hard I promise!
+<h4>Details of the Accelerator</h4>
+<p>
+    This solution accelerator is designed for use with intelligent applications with text-and speech input, such as chat bots or voice bots.
+    <ul>
+        <li>The accelerator provides a modular and extensible pre/post processing service</li>
+        <li>Enables greater flexibility for user input options in conversational scenarios</li>
+        <li>Enables extended, context-based understanding of user input</li>
+        <li>Uses a channel-based approach where appropriate</li>
+        <li>Provides process / UX flow best practices for common scenarios</li>
+    </ul>
+</p>
 
-Download this repository [here](https://github.com/iwiedenm/jekyll-theme-massively) and save it to any folder you want.
+<!-- <p>
+    The aim is to bring State-of-the-art (SOTA) object detection models quickly into production scenarios particularly around the use of defect detection as seen in many quality control scenarios.
+</p>
+<p>
+    Image Recognition aims to recognize and identify objects in images as well as understanding the content and context. TensorFlow object recognition algorithms classify and identify arbitrary objects within larger images. This is usually used in engineering applications such as social networks for photo tagging. By analyzing thousands of photos of trees for example, the technology can learn to identify a tree in an image it has never seen before.
+</p> -->
 
-Open a terminal window or a command line and ```cd``` to that location.
+<!-- <h3>Process Description</h3>
+<a class="image main"><img src="{{ "/images/ml-ops/mlops.png" | absolute_url }}" alt="" /></a> -->
+<p><u>Validation, Identification and Authentication - Definitions and Examples:</u></p>
+<div class="table-wrapper">
+    <table class="alt">
+        <thead>
+            <tr>
+                <th></th>
+                <th style="font-weight: bold; font-size: medium;">Validation</th>
+                <th style="font-weight: bold; font-size: medium;">identification</th>
+                <th style="font-weight: bold; font-size: medium;">Authentication</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="font-weight: bold; font-size: medium;">Definition</td>
+                <td >Entity extraction + data preparation for backend processing</td>
+                <td>Identify a user or asset</td>
+                <td>Authenticate a user or asset</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: medium;">Example</td>
+                <td>    
+                    - License plate format is valid
+                    <br>
+                    - Customer number format is valid</td>
+                <td>- License plate is known in backend system
+                    <br>
+                    - Customer number exists in customer database</td>
+                <td>- Combination of validated entities from user input which are verified with authentication database</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; font-size: medium;">Technological approaches</td>
+                <td>- Via pre/post processing functions based on entities (speech + text input)</td>
+                <td>- Via pre/post processing functions based on entities (speech + text input)</td>
+                <td>- Via Authentication processing functions based on entities (speech input)
+                    <br>
+                    - Via Oauth/Identity Provider validated login (e.g. AAD, etc.)</td>
+            </tr>
+             </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+<!-- <p>
+    <u>Details of the accelerator:</u> 
+    <ul>
+        <li>Leverages the <a href="https://jbetts05.github.io//blog/object-detection/">ML Ops accelerator </a> to provide a configurable and re-usable solution accelerator for computer vision detection use-cases.</li>
+        <li>Can deploy the computer vision model as a consumable service endpoint in the cloud (Azure).</li>
+        <li>Train models using <a href="https://github.com/tensorflow/models/tree/master/research/object_detection"> TensorFlow Object Detection API​​​​​​​ </a> leveraging transfer learning with <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md">model zoo </a> pre-trained models.</li>
+        <li>Uses Azure ML, Azure DevOps and TensorFlow.</li>
+    </ul>
+</p> -->
+<h3>Prerequisites</h3>
+<div class="box">
+    <ul>
+        <li>Access to an Azure subscription</li>
+        <li>Access to an Azure DevOps subscription</li>
+        <li>Service Principal Account</li>
+    </ul>
+</div>
 
-Then enter: ```bundle exec jekyll serve```. You can now access your new Jekyll site from [http://127.0.0.1:4000/](http://127.0.0.1:4000/). Have fun exploring your new site!
+<h3>Architecture</h3>
+<a class="image main"><img src="{{ "/images/cai/architecture.png" | absolute_url }}" alt="" /></a>    
 
-## Features
-### Auto-Generating Sitemap
-The sitemap is auto generated! Just simply change the front matter of each site. It looks like so...
-```
-sitemap:
-    priority: 0.7
-    lastmod: 2017-11-02
-    changefreq: weekly
-```
-### Formspring integration
-The contact form below each page on the footer actually collects information! Just change your email address in the ```_config.yml``` file!
+<h3>Use Case</h3>
+<ul>
+    <li>Validation - entity extraction and data preparation for backend processing</li>
+    <li>Identification - identify a user or asset</li>
+    <li>Authentication - authenticate a user or asset</li>
+</ul>
+
+<h3>Accelerator Components</h3>
+<a class="image main"><img src="{{ "/images/cai/accelerator-components.png" | absolute_url }}" alt="" /></a>
+<!-- <h3>Branching Strategy</h3>
+<a class="image main"><img src="{{ "/images/ml-ops/branching-strategy.png" | absolute_url }}" alt="" /></a> -->
+<h4>Access The Repository Here:</h4>
+<a href="https://github.com/microsoft/cai-advanced-processing-service"; style="">🔗CAI Repository🔗</a>
+
 <style>a {color: #6ba2d9;}</style>
