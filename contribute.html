@@ -1,0 +1,142 @@
+---
+layout: page
+title: "How To Contribute"
+description: ""
+image: ""
+---
+<!-- <a href="https://github.com/microsoft/glue"; style="float: right;">🔗GLUE Repository🔗</a> -->
+
+<h2>
+	How Can I Contribute My Work?
+</h2>
+<div class="box" style="background-color: rgb(243, 242, 241);">
+	<h3>Prerequisites</h3>
+	<p>
+		You will need a GitHub account that is linked to the Microsoft GitHub Organization to start. <br>
+
+		To create a GitHub account, navigate to <a href="https://github.com">https://github.com</a> https://github.com
+		and follow the instructions to sign-up. (The GitHub account is your personal account and remains your account
+		even after you stop working for Microsoft. <br>
+
+		Once you have a GitHub account, instructions to link your GitHub and Microsoft account can be found here: <a
+			href="https://repos.opensource.microsoft.com/ ">https://repos.opensource.microsoft.com/</a> <br>
+
+		Linking will give you access to the Microsoft Organization on GitHub. (This is were all the IP is located.)
+
+	</p>
+
+</div>
+
+<h3>​​​​​​​​​​​​​​Workflow To Create A New Accelerator</h3>
+<ul>
+	If you have great IP that can be packaged as a delivery ​​​​​​​accelerator, reach out to discuss your IP and see if
+	it qualifies for funding. If your IP qualifies, you will get the following:
+	<li>An internal project assignment, so you can log the time you spend curating your code. (funded with NBUE)</li>
+	<li>Help to create your own GitHub Opensource repository (Private or Public) to store your code and build your own
+		portfolio of evidence, to show the world what you have done.</li>
+	<li>Marketing of your accelerator to sellers, delivery teams and Industry teams.</li>
+	<li>Help, from others who have already published and reviewed code for solution accelerators that have been adopted
+		in the Data Science Toolkit.</li>
+	<li>Community recognition, we have won awards, you could be next.</li>
+</ul>
+
+<h3>Workflow For Contributing To Existing Accelerators</h3>
+<p>
+	This section will describe how to contribute using the git workflow (from now on called the SST Flow) used for the
+	different delivery accelerators in the Data Science Toolkit. The flow is an extension of the <a
+		href="http://scottchacon.com/2011/08/31/github-flow.html">Github flow</a> first described by Scott Chacon.
+	<br><br>
+
+	If you are new to git or feel like a brush-up, it is highly recommended to read <a
+		href="http://www.amazon.com/gp/product/1617291978/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617291978&linkCode=as2&tag=metro066-20&linkId=DO6IFJZHMDS4FS4O">Git
+		in Practice</a> by Mike McQuaid. <br><br>
+
+	The workflow is simple because it essentially involves only two types of branches: the default master branch and
+	feature branches. A feature branch is one that is used only for development of a single feature (or sometimes bug
+	fix) and then deleted after being merged into another branch.
+</p>
+<!-- <h3>Process Description</h3>
+<a class="image main"><img src="{{ "/images/ml-ops/mlops.png" | absolute_url }}" alt="" /></a> -->
+
+<!-- <p>
+    <u>Details of the accelerator:</u> 
+    <ul>
+        <li>Leverages the <a href="https://jbetts05.github.io//toolkit/object-detection/">ML Ops accelerator </a> to provide a configurable and re-usable solution accelerator for computer vision detection use-cases.</li>
+        <li>Can deploy the computer vision model as a consumable service endpoint in the cloud (Azure).</li>
+        <li>Train models using <a href="https://github.com/tensorflow/models/tree/master/research/object_detection"> TensorFlow Object Detection API​​​​​​​ </a> leveraging transfer learning with <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md">model zoo </a> pre-trained models.</li>
+        <li>Uses Azure ML, Azure DevOps and TensorFlow.</li>
+    </ul>
+</p> -->
+
+<!-- 
+<h3>Architecture</h3>
+-->
+
+<h3>SST Flow</h3>
+<ul>
+	<u>In GitHub Flow</u>
+	<li>All commits are made on feature branches.</li>
+	<li>Feature branches are merged to the master branch after review in a pull request.</li>
+	<li>All commits to master are considered stable.</li>
+
+	<br><u>The SST Flow is essentially GitHub Flow with a couple of extra elements:</u>
+	<li>Branches can be (and should be) rebased, rewritten, and squashed where appropriate (to make history cleaner, but
+		not if the branch is being used by multiple people).</li>
+	<li>Stable releases can be tagged on the master branch.</li>
+	<li>Release branches are branched off from master and can be committed to directly, cherry-picked, or merged to from
+		feature branches.</li>
+	<li>Unlike feature branches, release branches are newer rewritten.</li>
+	<li>Tags are created on feature branches rather than master.</li>
+</ul>
+<figure style="text-align: center;">
+	<a class="image main" style="margin: auto;"><img src="{{ " /images/contribute/git-flow.jpg" | absolute_url }}"
+			alt="Figure 1" style="max-width: 70%; width: auto; margin: auto;" /></a>
+	<figcaption style="font-size: small; font-weight: bold;">Figure 1: SST Flow</figcaption>
+</figure>
+<br>
+<figure style="text-align: center;">
+	<a class="image main" style="margin: auto;"><img src="{{ " /images/contribute/flow-key.jpg" | absolute_url }}"
+			alt="Figure 2" style="max-width: 70%; width: auto; margin: auto;" /></a>
+	<figcaption style="font-size: small; font-weight: bold;">Figure 2: Key</figcaption>
+</figure>
+<br><ol>
+	<u>Figure 1 shows SST Flow from top (the oldest commit) to bottom (the newest commit):</u>
+	<li>The initial commit to a repository is on the master branch and made with git add and git commit. Consider using
+		<i>git commit --allow-empty -m “Initial commit”</i> as this enables you to rewrite the history of the repository
+		before you publish it to GitHub.
+	</li>
+	<li>A feature is being developed, so it’s branched off the master branch with <i>git checkout -b</i>.</li>
+	<li>A release branch for the v1.x release series is branched off the master branch with <i>git checkout -b</i>.</li>
+	<li>A commit is made to the feature branch with git commit. It’s pushed with <i>git push</i>.</li>
+	<li>A feature branch is submitted for review in a pull request. If any changes are needed due to comments in the
+		pull request, they’re committed. The pull request is automatically updated after new commits have been pushed to
+		the remote branch. When the branch is ready, it’s merged to master with <i>git merge</i> and deleted locally
+		with <i>git branch --delete</i> and remotely with <i>git push --delete</i>.</li>
+	<li>Commits are made to the release branches with <i>git commit</i> for changes or fixes specific to a release but
+		not applicable to other application development. For example, such a commit may be changing a version number
+		displayed in the application.</li>
+	<li>Another feature or fix is developed, so a new feature branch is branched off the master branch with <i>git
+			checkout -- b</i>.</li>
+	<li>A feature branch is ready and merged to both master and release branch for the v1.x release series with <i>git
+			merge</i> and deleted locally with <i>git branch --delete</i> and remotely with <i>git push --delete</i>.
+		The new master branch is tagged v1.1 with <i>git tag</i> and pushed with <i>git push</i> and <i>git push
+			--tags</i>. The release branch is not deleted but kept around indefinitely in case any more stable releases
+		are needed from it.</li>
+	<li>Another feature is developed, so a new feature branch is branched off the master branch with <i>git checkout
+			-b</i>.</li>
+	<li>A fix is needed for the v2.x release series, so a new feature branch is branched off the v2.x release branch
+		with <i>git checkout -b</i>.</li>
+	<li>The feature branch fix is ready and merged to the v2.x release series branch with <i>git merge</i> and deleted
+		locally with <i>git branch --delete</i> and remotely with <i>git push --delete</i>. The new master branch is
+		tagged v2.1 with <i>git tag</i> and pushed with <i>git push</i> and <i>git push- -tags</i>.</li>
+	<li>The remaining feature branch needs to use changes in master and to rewrite commits, so it’s rebased and squashed
+		on top of master with <i>git rebase --interactive</i>. The may be to use work from master in the branch, to
+		resolve conflicts in the feature branch before they’re merged into master, or to clean up commit by rewriting
+		them.</li>
+	<li>The remaining feature branch is submitted for review, merged, and deleted.</li>
+</ol>
+<style>
+	a {
+		color: #6ba2d9;
+	}
+</style>
