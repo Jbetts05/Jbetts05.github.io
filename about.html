@@ -32,8 +32,29 @@ image: ""
   </style>
 </head>
 <body>
-  <div id="grid">
-    <div>
+  <p>
+      <select id="sel" onchange="toggle()">
+          <option value="1" selected>Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+      </select>
+  </p>
+</body>
+<script>
+  function toggle() {
+      var cont = document.getElementById('grid');
+      if (cont.style.float == 'none') {
+          cont.style.float = '';
+          cont.style.display = 'none';
+      }
+      else {
+          cont.style.display = 'grid';
+          cont.style.float = 'none';
+      }
+  }
+</script>
+  <div id="grid" style="display: grid; float: none;">
+    <div style="float:none">
       <img src="/images/contributor/florian.png" | absolute_url }}" alt="" width="100" height="100"
         border-radius="50%" style="margin-top: 3px;">
       <h6>Florian Pydde</h6>
