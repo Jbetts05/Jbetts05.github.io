@@ -55,13 +55,13 @@
 							<article>
 								<header>
 									<!-- <span class="date">{{ post.date | date_to_string }}</span> -->
-									<h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+									<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 									<span class="author" style="font-size: xx-large;">{{ post.author}}</span>
 								</header>
-								<!-- <a href="{{ post.url | absolute_url }}" class="image fit"><img src="{{ post.image | absolute_url }}" alt="" /></a> -->
+								<!-- <a href="{{ post.url }}" class="image fit"><img src="{{ post.image }}" alt="" /></a> -->
 								<p style="text-align: center;">{{ post.excerpt }}</p>
 								<ul class="actions">
-									<!-- <li><a href="{{ post.url | absolute_url }}" class="button">Full Story</a></li> -->
+									<!-- <li><a href="{{ post.url }}" class="button">Full Story</a></li> -->
 								</ul>
 							</article>
 							{% if mod4 == 0 %}
